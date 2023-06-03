@@ -1,12 +1,13 @@
-resource "aws_iam_role" "iam_role" {
-  name               = var.aws_iam_role
-  assume_role_policy = data.aws_iam_policy.aws_iam_role
+resource "aws_iam_policy" "project_policy" {
+  name        = var.aws_iam_policy
+  description = "Policy to attach to AWS resource"
 
-  managed_policy_arn = [
-    var.managed_policy_arn
-  ]
+  policy = "${file(var.iam-role-policy-JSON)}"
 }
 
-data "aws_iam_policy" "aws_iam_role" {
-  arn = var.aws_iam_role_arn
+resource "aws_iam_role" "project_role" {
+  name = var.aws_iam_role
+
+  assume_role_policy = "${file("var.assume-policy.json")}"
+  
 }

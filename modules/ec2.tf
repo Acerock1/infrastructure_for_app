@@ -4,7 +4,6 @@ resource "aws_instance" "app-server" {
     instance_type = var.instance_type
     vpc_security_group_ids = var.aws_security_group
     key_name = var.aws_key_pair
-
 }
 
 resource "aws_eip" "lb" {

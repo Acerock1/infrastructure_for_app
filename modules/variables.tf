@@ -60,3 +60,15 @@ variable "aws_iam_role"{
 variable "managed_policy_arn" {
     description = "iam policies managed by aws"
 }
+
+variable "aws_iam_policy" {
+  description = "name of the policy"
+}
+
+variable "iam-role-policy-JSON" {
+    description = "json from iam policy"
+}
+
+variable "assume_role_policy" {
+    description = "role IAM role would inherit"
+}
