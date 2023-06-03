@@ -48,3 +48,11 @@ variable "instance_type" {
     default = "t2.micro"
     type = string
 }
+
+variable "aws_iam_role_arn" {
+    description = "arn of fine grained iam_role"
+}
+
+variable "aws_iam_role"{
+    description = "name of aws iam role"
+}
