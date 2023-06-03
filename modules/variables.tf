@@ -56,3 +56,7 @@ variable "aws_iam_role_arn" {
 variable "aws_iam_role"{
     description = "name of aws iam role"
 }
+
+variable "managed_policy_arn" {
+    description = "iam policies managed by aws"
+}
